@@ -1,0 +1,28 @@
+/* index.css */
+html, body {
+  height: 100%; /* Ensure the body takes up the full height */
+  margin: 0; /* Reset margin */
+  padding: 0; /* Reset padding */
+}
+
+body {
+  background: linear-gradient(to right, #ffe5b4, #ffccbc);
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#root {
+  display: flex; /* Make sure the root element uses flex for alignment */
+  flex-direction: column; /* Arrange children in a column */
+  width: 100%; /* Make root full width */
+  height: 100%; /* Make root full height */
+}
+
+/* Optional: Add a media query for responsiveness */
+@media (max-width: 600px) {
+  body {
+    background: linear-gradient(to bottom, #ffe5b4, #ffccbc);
+  }
+}

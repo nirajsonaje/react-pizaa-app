@@ -1,0 +1,108 @@
+:root {
+  --primary-color: #ff6347;
+  --secondary-color: #fff;
+  --font-color: #333;
+}
+
+body {
+  background-color: var(--primary-color);
+  color: var(--font-color);
+}
+
+button {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: darken(var(--primary-color), 10%);
+}
+
+/* Pizza List Grid */
+.pizza-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.pizza-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.pizza-card:hover {
+  transform: scale(1.05);
+}
+/* Cart Section */
+.cart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin: 10px 0;
+}
+
+.cart-total {
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+
+input, button {
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 100%;
+  transition: border-color 0.3s;
+}
+
+input:focus {
+  border-color: var(--primary-color);
+}
+
+button {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: darken(var(--primary-color), 10%);
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.pizza-card {
+  animation: fadeIn 1s ease-in-out;
+}
+@media (max-width: 768px) {
+  .pizza-list {
+    grid-template-columns: 1fr;
+  }
+
+  .cart-item {
+    flex-direction: column;
+  }
+}
