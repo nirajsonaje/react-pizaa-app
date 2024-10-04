@@ -1,4 +1,5 @@
-<<<<<<< HEAD
+https://react-pizaa-app-delta.vercel.app/ 
+
 # react-pizaa-app
 =======
 # Getting Started with Create React App
